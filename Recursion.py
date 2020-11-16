@@ -1,10 +1,16 @@
 # Factorial
-import sys
-sys.setrecursionlimit(10000)
+# import sys
+# sys.setrecursionlimit(10000)
 
-x = 3
+x = 10
 
 def factorial(n):
-    print(n)
-    return n * factorial(n-1)
-factorial(x)
+    assert n >= 0 and int(n) == n, 'The number must be a positve integer only'
+    if n in [0,1]:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+
+print(factorial(x))
+endl
